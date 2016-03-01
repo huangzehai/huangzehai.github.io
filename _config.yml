@@ -1,0 +1,21 @@
+# Site settings
+title: "黄泽海的博客"
+logo: logo.png # image from https://www.flickr.com/photos/lwr/5496279831/in/set-72157594159055823
+email: your-email@domain.com
+description: > # this means to ignore newlines until "url:"
+  关注Java Web开发、大数据开发相关技术.
+url: "http://huangzehai.github.io/" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/
+twitter_username: jekyllrb
+github_username:  jekyll
+
+permalink: pretty
+paginate: 5
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+gems:
+  - jekyll-sitemap
+  - jekyll-paginate
