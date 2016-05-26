@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "在Windows上使用Java API操作HBase"
+title: "HBase Java API on Windows"
 image: hbase_logo_with_orca_large.png
 video: false
 ---
