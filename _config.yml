@@ -16,9 +16,6 @@ paginate: 5
 markdown: kramdown
 highlighter: rouge
 
-#encoding
-encoding: utf-8
-
 gems:
   - jekyll-sitemap
   - jekyll-paginate
