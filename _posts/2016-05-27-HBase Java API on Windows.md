@@ -1,19 +1,25 @@
 ---
 layout: post
-title: "HBase Java API on Windows"
+title: "在Windows上使用Java API操作HBase"
 image: hbase_logo_with_orca_large.png
 video: false
 ---
-### HBase Configuration
+### 概述
+在Windows上安装VirtualBox虚拟机，在虚拟机上安装Ubuntu 12.04 Server，在Ubuntu中安装HBase单机版。在Windows上使用Java API操作HBase。
+
+### Ubuntu
+
+域名配置
 {% highlight css %}
 adam@hbase:~/hbase-1.2.1/conf$ cat /etc/hostname
 hbase
 {% endhighlight %}
 
+
 {% highlight css %}
 adam@hbase:~/hbase-1.2.1/conf$ cat /etc/hosts
 127.0.0.1    localhost
-#For region servers
+# For region servers
 10.1.2.127 hbase
 
 # The following lines are desirable for IPv6 capable hosts
@@ -22,7 +28,7 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 {% endhighlight %}
 
-##hbase-site.xml
+#### hbase-site.xml
 
 {% highlight css %}
 <configuration>
@@ -45,13 +51,15 @@ ff02::2 ip6-allrouters
 regionservers[optional]
 hbase
 
-###Windows Client:
-####hosts
+### Windows Client
+
+域名配置
 {% highlight css %}
 # MyVM
 10.1.2.127 hbase
 {% endhighlight %}
 
+Java API的maven依赖仅需要hbase-client。
 {% highlight css %}
 <dependency>
     <groupId>org.apache.hbase</groupId>
@@ -60,6 +68,8 @@ hbase
 </dependency>
 {% endhighlight %}
 
+在Windows上调用HBase的Java API会报找不到winutils.exe的错误。
+可以设置hadoop.home.dir为hadoop common来修复这个问题。Hadoop官方没有编译好的Windows Hadoop发行包，需要自己在Windows上编译或者下载别人编译好的hadoop common包.
 {% highlight css %}
 public class HBaseDemo {
     public final static byte[] family = Bytes.toBytes("info");
