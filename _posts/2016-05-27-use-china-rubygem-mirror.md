@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "使用国内RubyGem镜像"
-image: header.jpg
+image: Ruby_logo.png
 video: false
 ---
 
