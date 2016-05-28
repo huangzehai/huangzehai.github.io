@@ -4,8 +4,9 @@ title: "代码的味道"
 image: diff-types-coffee.jpg
 video: false
 ---
-不同的代码可以实现相同的功能，有些代码简短明了，有些则看起来有点绕。我喜欢的代码是那种直截了当的，不需要注释，一眼就能看懂的。对！我喜欢这种代码味道。
-今天看到同事写的一行代码
+不同的代码可以实现相同的功能，有些代码简短明了，有些则看起来有点绕。我喜欢的代码是那种直截了当的，不需要注释，一眼就能看懂的。若代码是一种食物，好的代码应该也有好的代码味道。
+
+今天看到同事写的一行代码，如下：
 {% highlight css %}
 String country = StringUtils.isNotEmpty(countryString)?countryString:"-"
 {% endhighlight %}
