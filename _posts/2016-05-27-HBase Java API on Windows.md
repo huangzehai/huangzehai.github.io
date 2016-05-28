@@ -10,13 +10,13 @@ video: false
 ### Ubuntu
 
 域名配置
-{% highlight css %}
+{% highlight shell %}
 adam@hbase:~/hbase-1.2.1/conf$ cat /etc/hostname
 hbase
 {% endhighlight %}
 
 
-{% highlight css %}
+{% highlight shell %}
 adam@hbase:~/hbase-1.2.1/conf$ cat /etc/hosts
 127.0.0.1    localhost
 # For region servers
@@ -30,7 +30,7 @@ ff02::2 ip6-allrouters
 
 #### hbase-site.xml
 
-{% highlight css %}
+{% highlight xml %}
 <configuration>
 <property>
     <name>hbase.rootdir</name>
@@ -49,18 +49,20 @@ ff02::2 ip6-allrouters
 {% endhighlight %}
 
 regionservers[optional]
+{% highlight plain %}
 hbase
+{% endhighlight %}
 
 ### Windows Client
 
 域名配置
-{% highlight css %}
+{% highlight shell %}
 # MyVM
 10.1.2.127 hbase
 {% endhighlight %}
 
 Java API的maven依赖仅需要hbase-client。
-{% highlight css %}
+{% highlight xml %}
 <dependency>
     <groupId>org.apache.hbase</groupId>
     <artifactId>hbase-client</artifactId>
@@ -70,7 +72,7 @@ Java API的maven依赖仅需要hbase-client。
 
 在Windows上调用HBase的Java API会报找不到winutils.exe的错误。
 可以设置hadoop.home.dir为hadoop common来修复这个问题。Hadoop官方没有编译好的Windows Hadoop发行包，需要自己在Windows上编译或者下载别人编译好的hadoop common包.
-{% highlight css %}
+{% highlight java %}
 public class HBaseDemo {
     public final static byte[] family = Bytes.toBytes("info");
 

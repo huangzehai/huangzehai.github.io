@@ -14,7 +14,7 @@ rubygems.org 托管在Amazon S3上，在国内访问其资源文件会间歇性�
 * Ruby China: [https://gems.ruby-china.org/](https://gems.ruby-china.org/)
 
 #### 如何使用？
-{% highlight css %}
+{% highlight shell %}
 $ gem sources --add http://mirror.sysu.edu.cn/rubygems --remove https://rubygems.org/
 $ gem sources -l
 {% endhighlight %}
