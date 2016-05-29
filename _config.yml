@@ -12,6 +12,9 @@ github_username:  huangzehai
 permalink: pretty
 paginate: 5
 
+# Timezone
+TZ: Asia/Shanghai
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
