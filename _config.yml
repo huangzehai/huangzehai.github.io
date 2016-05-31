@@ -3,7 +3,7 @@ title: "黄泽海的博客"
 logo: logo.png # image from https://www.flickr.com/photos/lwr/5496279831/in/set-72157594159055823
 email: chaogeek@foxmail.com
 description: > # this means to ignore newlines until "url:"
-  关注Java Web开发、大数据开发相关技术.
+  关注Java Web开发和Hadoop, Storm, Spark等批处理及实时大数据计算相关技术，业余也会玩一下iOS开发(Swift)。
 url: "http://huangzehai.github.io/" # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog/
 twitter_username: huangzehai
